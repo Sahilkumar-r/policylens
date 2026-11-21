@@ -144,6 +144,8 @@ uv run uvicorn policylens.api:app           # http://localhost:8000  (first star
 uv run python scripts/make_corpus.py        # regenerate the synthetic library and questions
 uv run python eval/run_evals.py retrieval   # also: refusal, security, parsing, latency, failures
 uv run pytest -q                            # 23 tests, no model download
-docker compose up --build                   # image builds (3.2 GB) and serves requests when started with docker run; compose itself was not run. The first request ingests the library and OCRs the scans: it took 420 s on a loaded laptop
+docker compose up --build                   # see the note below
 ```
 Optional `LLM_API_KEY` (see `.env.example`) switches answers to an OpenAI compatible model; evals in `eval/` always run in offline mode.
+
+Docker status: an earlier build of this Dockerfile succeeded, the image was 3.2 GB, and it served requests (the first request took 420 s because OCR was not cached). The Dockerfile has since been changed to warm the OCR and embedding caches at build time. That step runs correctly outside Docker (1,203 chunks), but a full rebuild did not finish because the host disk was full and Docker's VM went read only, so the change is **not verified in a container**. `docker compose up` itself was never run.
