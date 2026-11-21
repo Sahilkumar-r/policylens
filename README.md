@@ -35,7 +35,7 @@ Details: [PRD](docs/PRD.md), [technical spec](docs/TECH_SPEC.md), [evaluation pl
 | Answers | Extractive by default, OpenAI compatible LLM when `LLM_API_KEY` is set | Requiring an API key to run |
 
 ## Evaluation
-All results below are from **offline mode**: extractive answers, no LLM. Hardware: a CPU laptop, no GPU. Test split n = 123 questions (76 answerable).
+Results are from **offline mode** (extractive answers, no LLM) unless a section says LLM mode. Hardware: a CPU laptop, no GPU. Test split n = 123 questions (76 answerable).
 
 **Retrieval (answerable test questions, n = 76), Recall@5 and MRR**
 
@@ -89,7 +89,25 @@ This is lower than the 96 to 99 percent answer correctness in the chunking compa
 
 **Latency (test questions, CPU, n = 123)**: hybrid p50 31.9 ms and p95 55.0 ms; a cache hit about 0.1 ms; with the reranker p50 10,478 ms and p95 12,679 ms.
 
-**Not run:** LLM faithfulness and correctness scoring (RAGAS), judge versus manual agreement, LLM answer leakage, and cost per 1,000 queries. They need an LLM key, and none was available.
+**LLM mode (Llama 3.1 8B answers, Mistral Small 3.2 judges; test split n = 123; `eval/results/llm.json`).** Two model families, so the generator never grades itself. Run through OpenRouter.
+
+| Metric | Result |
+|---|---|
+| Answerable questions refused (guard or model) | 17.1 percent (13 of 76) |
+| Faithful to the retrieved context, by judge (63 answered) | 98.4 percent |
+| Correct, by judge | 88.9 percent |
+| Gold answer present, by string match | 98.4 percent |
+| Judge and string match agree | 90.5 percent |
+| Unanswerable and restricted questions refused | 97.9 percent (46 of 47) |
+| Restricted value in an answer, restricted document cited | 0 and 0 (30 restricted questions) |
+| Latency per LLM answer | p50 861 ms, p95 1,665 ms |
+| Cost | about 603 tokens per answer, $0.013 per 1,000 answers at list price; the judge added $0.00275 for this run |
+
+The judge and the string match disagree on 9.5 percent of answered questions. I read the first four verdicts the judge marked incorrect: in all four the answer stated the gold value (for example 3 days of paid marriage leave against gold 3), so the judge was wrong. That is four cases, not an audit, and the 88.9 percent judge figure probably understates correctness. The 50 verdicts are in `eval/results/llm_judged_sample.json` with an empty `human_checked` field for a human to fill in. A stricter score (judge correct, gold document cited, not refused) was 53.9 percent; it mostly reflects those judge verdicts and answers that cite a different document marker, and I did not separate the two, so treat it as a lower bound.
+
+Prompt injection with the real model (2 attacks): the generic poisoned note was retrieved and the model repeated its instruction inside the answer but gave no restricted value; the targeted note led to a refusal. Two attacks do not show the defence holds in general.
+
+**Not run:** RAGAS (the judge here is a custom prompt), a human check of the judge on 50 samples, a larger production model, and cost at production volume.
 
 ## What failed and why
 30 errors on the 123 test questions (`eval/results/failures.json`):
@@ -104,7 +122,7 @@ This is lower than the 96 to 99 percent answer correctness in the chunking compa
 Root cause for the first two rows: the dense cosine is not calibrated across question types. Correct short facts score 0.48 to 0.53 while unrelated regulator text scores 0.59 to 0.63, so no single threshold works; table questions suffer most (37.5 percent refused) because a table chunk is long and its embedding is diluted. Earlier fixes: OCR dropped spaces ("Thebranchvaultcashlimit"), which caused 3 retrieval misses on the scanned branch manual until a spacing repair was added (before: Recall@5 95.1 for every method on the small corpus, kept in `eval/results/retrieval_before_ocr_fix.json`). The first benchmark also saturated, so the real PDFs were added.
 
 ## Limitations and next steps
-- No LLM evaluation (see above). Next: set `LLM_API_KEY`, run faithfulness and leakage tests, and compare judge scores with manual labels.
+- The LLM judge disagreed with string matching on 9.5 percent of answers and was wrong in the four cases I read. Next: a human check of the 50 sample verdicts, and a stronger or different judge.
 - Refusal: combine the cosine with lexical coverage or the reranker score instead of one cutoff.
 - 19 public labels are AI written and unreviewed; 30 unanswerable questions are hand written; the rest are correct by construction but synthetic, so real world accuracy is not implied.
 - The reranker is too slow on CPU; try a smaller cross encoder or rerank fewer candidates.
@@ -118,6 +136,6 @@ uv run uvicorn policylens.api:app           # http://localhost:8000  (first star
 uv run python scripts/make_corpus.py        # regenerate the synthetic library and questions
 uv run python eval/run_evals.py retrieval   # also: refusal, security, parsing, latency, failures
 uv run pytest -q                            # 23 tests, no model download
-docker compose up --build                   # container (written but NOT yet built or tested: Docker Desktop was not running)
+docker compose up --build                   # image builds (3.2 GB) and serves requests when started with docker run; compose itself was not run. The first request ingests the library and OCRs the scans: it took 420 s on a loaded laptop
 ```
 Optional `LLM_API_KEY` (see `.env.example`) switches answers to an OpenAI compatible model; evals in `eval/` always run in offline mode.
