@@ -118,6 +118,6 @@ uv run uvicorn policylens.api:app           # http://localhost:8000  (first star
 uv run python scripts/make_corpus.py        # regenerate the synthetic library and questions
 uv run python eval/run_evals.py retrieval   # also: refusal, security, parsing, latency, failures
 uv run pytest -q                            # 23 tests, no model download
-docker compose up --build                   # container
+docker compose up --build                   # container (written but NOT yet built or tested: Docker Desktop was not running)
 ```
 Optional `LLM_API_KEY` (see `.env.example`) switches answers to an OpenAI compatible model; evals in `eval/` always run in offline mode.
