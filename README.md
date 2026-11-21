@@ -6,7 +6,15 @@ Access controlled RAG over messy enterprise documents: scanned PDFs, tables, Urd
 "Chat with your documents" demos work on clean Markdown. A real policy library has scans, tables, mixed Urdu and English, and restricted files (HR pay bands, treasury limits). A wrong answer or a leaked finance document is worse than no answer. PolicyLens ingests those formats, cites document and page, refuses when it cannot find an answer, and enforces access levels inside the stores, not after retrieval.
 
 ## Demo
-No hosted demo yet. Run it locally (below) and open `http://localhost:8000`. Pick a role in the page header and ask. Demo tokens (`demo-employee`, `demo-hr`, `demo-finance`, `demo-admin`) are for local use only.
+Run it locally (below) and open `http://localhost:8000`, or read the [case study](docs/blog_post.md) (also on the portfolio at `/projects/policylens/`). A hosted demo is prepared (`deploy/hf_space.py`) but not deployed yet. A [two minute video script](docs/DEMO_SCRIPT.md) is ready to record. Pick a role in the page header and ask. Demo tokens (`demo-employee`, `demo-hr`, `demo-finance`, `demo-admin`) are for local use only. These screenshots were taken in LLM mode.
+
+| Employee, cited answer | Employee, restricted question refused |
+|---|---|
+| ![Cited answer](docs/img/1-employee-cited-answer.png) | ![Refusal](docs/img/2-employee-refused-restricted.png) |
+
+| A real failure: a table question refused | Scanned PDF answered through OCR (no citation shown) |
+|---|---|
+| ![Failure](docs/img/3-failure-finance-table-question-refused.png) | ![Scanned PDF answer](docs/img/4-finance-scanned-pdf-answer.png) |
 
 ## Architecture
 ```mermaid
