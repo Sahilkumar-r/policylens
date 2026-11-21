@@ -80,6 +80,8 @@ async def ingest(
     user: dict = Depends(current_user),
     e: Engine = Depends(get_engine),
 ):
+    if os.getenv("DEMO_READONLY") == "1":
+        raise HTTPException(403, "uploads are disabled on the public demo")
     if user["role"] != "admin":
         raise HTTPException(403, "only admin can ingest documents")
     if access_level not in config.LEVELS:
