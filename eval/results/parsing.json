@@ -1,0 +1,202 @@
+{
+ "date": "2026-11-21",
+ "commit": "4fb69a5",
+ "mode": "offline_extractive",
+ "n": 20,
+ "pages": 10,
+ "note": "word error rate in percent, lower is better; truth is the text of the source PDF the scan was rendered from",
+ "summary": {
+  "clean_scan": {
+   "pymupdf_wer": 100.0,
+   "pdfplumber_wer": 100.0,
+   "rapidocr_wer": 42.4
+  },
+  "hard_scan": {
+   "pymupdf_wer": 100.0,
+   "pdfplumber_wer": 100.0,
+   "rapidocr_wer": 51.7
+  }
+ },
+ "rows": [
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 33,
+   "condition": "clean_scan",
+   "words": 541,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.3512014787430684
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 33,
+   "condition": "hard_scan",
+   "words": 541,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.4454713493530499
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 31,
+   "condition": "clean_scan",
+   "words": 371,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.3719676549865229
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 31,
+   "condition": "hard_scan",
+   "words": 371,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.41509433962264153
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 32,
+   "condition": "clean_scan",
+   "words": 570,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.43333333333333335
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 32,
+   "condition": "hard_scan",
+   "words": 570,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.3157894736842105
+  },
+  {
+   "file": "sbp_pr_housing_finance.pdf",
+   "page": 21,
+   "condition": "clean_scan",
+   "words": 228,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.9736842105263158
+  },
+  {
+   "file": "sbp_pr_housing_finance.pdf",
+   "page": 21,
+   "condition": "hard_scan",
+   "words": 228,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.9780701754385965
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 23,
+   "condition": "clean_scan",
+   "words": 578,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.356401384083045
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 23,
+   "condition": "hard_scan",
+   "words": 578,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.44982698961937717
+  },
+  {
+   "file": "hec_plagiarism_policy.pdf",
+   "page": 17,
+   "condition": "clean_scan",
+   "words": 342,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.21637426900584794
+  },
+  {
+   "file": "hec_plagiarism_policy.pdf",
+   "page": 17,
+   "condition": "hard_scan",
+   "words": 342,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.4415204678362573
+  },
+  {
+   "file": "hec_plagiarism_policy.pdf",
+   "page": 16,
+   "condition": "clean_scan",
+   "words": 301,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.132890365448505
+  },
+  {
+   "file": "hec_plagiarism_policy.pdf",
+   "page": 16,
+   "condition": "hard_scan",
+   "words": 301,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.4053156146179402
+  },
+  {
+   "file": "sbp_pr_sme_financing.pdf",
+   "page": 2,
+   "condition": "clean_scan",
+   "words": 48,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.625
+  },
+  {
+   "file": "sbp_pr_sme_financing.pdf",
+   "page": 2,
+   "condition": "hard_scan",
+   "words": 48,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.7291666666666666
+  },
+  {
+   "file": "sbp_prudential_regs_ipf.pdf",
+   "page": 24,
+   "condition": "clean_scan",
+   "words": 210,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.4714285714285714
+  },
+  {
+   "file": "sbp_prudential_regs_ipf.pdf",
+   "page": 24,
+   "condition": "hard_scan",
+   "words": 210,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.6
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 53,
+   "condition": "clean_scan",
+   "words": 533,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.31144465290806755
+  },
+  {
+   "file": "sbp_pr_microfinance.pdf",
+   "page": 53,
+   "condition": "hard_scan",
+   "words": 533,
+   "pymupdf_wer": 1.0,
+   "pdfplumber_wer": 1.0,
+   "rapidocr_wer": 0.3921200750469043
+  }
+ ]
+}

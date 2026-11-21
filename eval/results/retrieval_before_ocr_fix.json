@@ -1,0 +1,201 @@
+{
+ "date": "2026-11-21",
+ "commit": "03ad07f",
+ "mode": "offline_extractive",
+ "n": 61,
+ "split": "test",
+ "note": "answer_ok = gold string in extractive answer",
+ "chunking": {
+  "fixed": {
+   "recall5": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 91.8,
+    "scanned": 40.0,
+    "table": 95.0,
+    "text": 96.9,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "section": {
+   "recall5": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 92.6,
+    "scanned": 40.0,
+    "table": 92.5,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "section_table": {
+   "recall5": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 94.3,
+    "scanned": 40.0,
+    "table": 97.5,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  }
+ },
+ "retrieval": {
+  "bm25": {
+   "recall5": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 96.7,
+    "scanned": 60.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "dense": {
+   "recall5": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 92.2,
+    "scanned": 40.0,
+    "table": 91.2,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 93.4,
+    "scanned": 40.0,
+    "table": 95.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 98.4,
+    "scanned": 80.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "hybrid": {
+   "recall5": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 94.3,
+    "scanned": 40.0,
+    "table": 97.5,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 96.7,
+    "scanned": 60.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "hybrid_rerank": {
+   "recall5": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 95.1,
+    "scanned": 40.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 96.7,
+    "scanned": 60.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 98.4,
+    "scanned": 80.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  }
+ }
+}

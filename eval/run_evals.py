@@ -349,7 +349,7 @@ def cmd_parsing():
     picks = [pages[i] for i in rng.permutation(len(pages))[:10]]
     rows = []
     for fn, i in picks:
-        page = fitz.open(DATA / "corpus" / fn)[i]
+        page = fitz.open(DATA / ("public" if fn.startswith(("sbp_", "fbr_", "hec_")) else "corpus") / fn)[i]
         truth = norm(page.get_text()).split()
         for cname, c in conds.items():
             img = Image.open(io.BytesIO(page.get_pixmap(dpi=c["dpi"]).tobytes("png"))).convert("L")
@@ -363,7 +363,8 @@ def cmd_parsing():
             pg.insert_image(pg.rect, stream=buf.getvalue())
             tmp = ROOT / ".cache" / "scan.pdf"
             pdf.save(tmp)
-            plumb = pdfplumber.open(tmp).pages[0].extract_text() or ""
+            with pdfplumber.open(tmp) as pp:
+                plumb = pp.pages[0].extract_text() or ""
             rows.append(
                 dict(
                     file=fn,
@@ -398,7 +399,91 @@ def cmd_parsing():
     )
 
 
+def cmd_failures():
+    """Bucket every wrong outcome on the test split by cause, with examples, using the shipped configuration."""  # noqa: E501
+    e = engine("section_table")
+    buckets: dict[str, list] = defaultdict(list)
+    n = 0
+    for q in QUESTIONS:
+        if q["split"] != "test":
+            continue
+        n += 1
+        e.cache = SemanticCache()
+        r = e.ask(q["question"], q["role"])
+        chunks = [e.index.chunks[c] for c in r["retrieved"]]
+        top = chunks[0].doc_id if chunks else None
+        item = dict(
+            id=q["id"],
+            category=q["category"],
+            question=q["question"],
+            top_doc=top,
+            top_score=round(r["top_score"], 2),
+            answer=r["answer"][:120],
+        )
+        if q["answerable"]:
+            if r["refused"]:
+                buckets["over_refusal (answerable, refused)"].append(item)
+            elif not any(is_gold(c, q) for c in chunks):
+                buckets["retrieval_miss (gold chunk not in top 5)"].append(item)
+            elif not contains(r["answer"], q["gold_answer"]):
+                buckets["wrong_sentence (gold in context, extractive pick wrong)"].append(item)
+        elif not r["refused"]:
+            kind = (
+                "restricted_answered_from_other_doc"
+                if q["category"] == "restricted"
+                else "unanswerable_answered"
+            )
+            buckets[f"{kind} (should refuse, answered)"].append(item)
+    out = {k: dict(count=len(v), examples=v[:3]) for k, v in sorted(buckets.items())}
+    for k, v in out.items():
+        print(f"{v['count']:3} {k}")
+    save("failures", dict(meta(n, threshold=config.REFUSAL_THRESHOLD), buckets=out))
+
+
+def cmd_endtoend():
+    """Strict end to end check with the shipped configuration (not refused, cites gold doc, has gold answer).
+    answer. Also the refusal rate on Urdu and mixed questions."""
+    e = engine("section_table")
+    rows = []
+    for q in QUESTIONS:
+        if q["split"] != "test" and q["category"] not in ("urdu", "mixed"):
+            continue
+        if not q["answerable"]:
+            continue
+        e.cache = SemanticCache()
+        r = e.ask(q["question"], q["role"])
+        cited = {c["doc_id"] for c in r["citations"]}
+        rows.append(
+            dict(
+                category=q["category"],
+                split=q["split"],
+                refused=float(r["refused"]),
+                strict_ok=float(
+                    not r["refused"] and q["gold_doc"] in cited and contains(r["answer"], q["gold_answer"])
+                ),
+                string_only_ok=float(contains(r["answer"], q["gold_answer"])),
+            )
+        )
+    test = [r for r in rows if r["split"] == "test"]
+    out = dict(
+        test_answerable_n=len(test),
+        strict_correct=by_category(test, "strict_ok"),
+        refused=by_category(test, "refused"),
+        string_only_correct=by_category(test, "string_only_ok"),
+        urdu_mixed_all_splits=dict(
+            n=sum(r["category"] in ("urdu", "mixed") for r in rows),
+            refused_pct=pct(
+                float(np.mean([r["refused"] for r in rows if r["category"] in ("urdu", "mixed")]))
+            ),
+        ),
+    )
+    print(json.dumps(out, indent=1))
+    save("endtoend", dict(meta(len(test), threshold=config.REFUSAL_THRESHOLD), **out))
+
+
 COMMANDS = dict(
+    endtoend=cmd_endtoend,
+    failures=cmd_failures,
     retrieval=cmd_retrieval,
     refusal=cmd_refusal,
     security=cmd_security,

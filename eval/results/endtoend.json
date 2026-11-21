@@ -1,0 +1,39 @@
+{
+ "date": "2026-11-21",
+ "commit": "4fb69a5",
+ "mode": "offline_extractive",
+ "n": 76,
+ "threshold": 0.59,
+ "test_answerable_n": 76,
+ "strict_correct": {
+  "ALL": 81.6,
+  "public": 66.7,
+  "public_scanned": 100.0,
+  "scanned": 80.0,
+  "table": 62.5,
+  "text": 97.0,
+  "urdu": 100.0
+ },
+ "refused": {
+  "ALL": 14.5,
+  "public": 0.0,
+  "public_scanned": 0.0,
+  "scanned": 20.0,
+  "table": 37.5,
+  "text": 3.0,
+  "urdu": 0.0
+ },
+ "string_only_correct": {
+  "ALL": 84.2,
+  "public": 88.9,
+  "public_scanned": 100.0,
+  "scanned": 80.0,
+  "table": 62.5,
+  "text": 97.0,
+  "urdu": 100.0
+ },
+ "urdu_mixed_all_splits": {
+  "n": 9,
+  "refused_pct": 11.1
+ }
+}

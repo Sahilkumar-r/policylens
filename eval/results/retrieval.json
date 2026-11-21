@@ -1,0 +1,251 @@
+{
+ "date": "2026-11-21",
+ "commit": "4fb69a5",
+ "mode": "offline_extractive",
+ "n": 76,
+ "split": "test",
+ "note": "answer_ok = gold string in extractive answer",
+ "chunking": {
+  "fixed": {
+   "recall5": {
+    "ALL": 96.1,
+    "public": 66.7,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 89.0,
+    "public": 64.4,
+    "public_scanned": 100.0,
+    "scanned": 85.0,
+    "table": 90.6,
+    "text": 93.4,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 96.1,
+    "public": 88.9,
+    "public_scanned": 100.0,
+    "scanned": 80.0,
+    "table": 95.8,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "section": {
+   "recall5": {
+    "ALL": 96.1,
+    "public": 66.7,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 91.9,
+    "public": 58.2,
+    "public_scanned": 100.0,
+    "scanned": 86.7,
+    "table": 92.7,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 97.4,
+    "public": 100.0,
+    "public_scanned": 100.0,
+    "scanned": 80.0,
+    "table": 95.8,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "section_table": {
+   "recall5": {
+    "ALL": 96.1,
+    "public": 66.7,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 94.0,
+    "public": 62.3,
+    "public_scanned": 100.0,
+    "scanned": 90.0,
+    "table": 97.2,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 98.7,
+    "public": 88.9,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  }
+ },
+ "retrieval": {
+  "bm25": {
+   "recall5": {
+    "ALL": 98.7,
+    "public": 88.9,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 96.9,
+    "public": 73.8,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 100.0,
+    "public": 100.0,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 100.0,
+    "public": 100.0,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "dense": {
+   "recall5": {
+    "ALL": 92.1,
+    "public": 66.7,
+    "public_scanned": 100.0,
+    "scanned": 80.0,
+    "table": 91.7,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 86.9,
+    "public": 61.1,
+    "public_scanned": 100.0,
+    "scanned": 72.9,
+    "table": 78.9,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 92.1,
+    "public": 88.9,
+    "public_scanned": 100.0,
+    "scanned": 80.0,
+    "table": 83.3,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 94.7,
+    "public": 88.9,
+    "public_scanned": 100.0,
+    "scanned": 80.0,
+    "table": 91.7,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "hybrid": {
+   "recall5": {
+    "ALL": 96.1,
+    "public": 66.7,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 94.0,
+    "public": 62.3,
+    "public_scanned": 100.0,
+    "scanned": 90.0,
+    "table": 97.2,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 98.7,
+    "public": 88.9,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 100.0,
+    "public": 100.0,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  },
+  "hybrid_rerank": {
+   "recall5": {
+    "ALL": 100.0,
+    "public": 100.0,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "mrr": {
+    "ALL": 98.5,
+    "public": 87.0,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "answer_ok": {
+    "ALL": 100.0,
+    "public": 100.0,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   },
+   "context_ok": {
+    "ALL": 100.0,
+    "public": 100.0,
+    "public_scanned": 100.0,
+    "scanned": 100.0,
+    "table": 100.0,
+    "text": 100.0,
+    "urdu": 100.0
+   }
+  }
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "date": "2026-11-21",
+ "commit": "4fb69a5",
+ "mode": "offline_extractive",
+ "n": 123,
+ "threshold": 0.59,
+ "buckets": {
+  "over_refusal (answerable, refused)": {
+   "count": 11,
+   "examples": [
+    {
+     "id": "a012",
+     "category": "text",
+     "question": "What is the maximum value of a gift an employee may accept from a supplier?",
+     "top_doc": "code_of_conduct",
+     "top_score": 0.53,
+     "answer": "I could not find this in the documents you have access to."
+    },
+    {
+     "id": "a036",
+     "category": "table",
+     "question": "What is the daily meal allowance for Grade 4?",
+     "top_doc": "travel_expense_policy",
+     "top_score": 0.48,
+     "answer": "I could not find this in the documents you have access to."
+    },
+    {
+     "id": "a038",
+     "category": "table",
+     "question": "What is the hotel cap per night for Grade 6?",
+     "top_doc": "travel_expense_policy",
+     "top_score": 0.58,
+     "answer": "I could not find this in the documents you have access to."
+    }
+   ]
+  },
+  "restricted_answered_from_other_doc (should refuse, answered)": {
+   "count": 12,
+   "examples": [
+    {
+     "id": "r058",
+     "category": "restricted",
+     "question": "What is the single transaction approval limit for the Director Finance?",
+     "top_doc": "sbp_prudential_regs_ipf",
+     "top_score": 0.63,
+     "answer": "In short term finance facilities administered as tranches under a single master limit, (i) threshold limit of Rs. [1]"
+    },
+    {
+     "id": "r059",
+     "category": "restricted",
+     "question": "What is the single transaction approval limit for the CFO?",
+     "top_doc": "sbp_prudential_regs_ipf",
+     "top_score": 0.59,
+     "answer": "Single Company Investment Limit: (i) The investment of banks/DFIs, in aggregate, in shares of any single company shall b"
+    },
+    {
+     "id": "r061",
+     "category": "restricted",
+     "question": "What is the single transaction approval limit for the CEO?",
+     "top_doc": "sbp_prudential_regs_ipf",
+     "top_score": 0.62,
+     "answer": "Single Company Investment Limit: (i) The investment of banks/DFIs, in aggregate, in shares of any single company shall b"
+    }
+   ]
+  },
+  "retrieval_miss (gold chunk not in top 5)": {
+   "count": 3,
+   "examples": [
+    {
+     "id": "p006",
+     "category": "public",
+     "question": "After how many days overdue is housing finance classified as Substandard?",
+     "top_doc": "sbp_pr_sme_financing",
+     "top_score": 0.61,
+     "answer": "(i.e., reaches 180 days past due) within two years after declassification, the financing shall be classified in the same"
+    },
+    {
+     "id": "p007",
+     "category": "public",
+     "question": "What is the maximum Loan to Value ratio under the microfinance bank prudential regulations?",
+     "top_doc": "sbp_pr_housing_finance",
+     "top_score": 0.75,
+     "answer": "HF-5: Loan-to-Value Ratio The maximum Loan-to-Value (LTV) ratio for housing finance shall be 90:10. [1]"
+    },
+    {
+     "id": "p009",
+     "category": "public",
+     "question": "What percentage of paid-up shares of a microfinance bank counts as sponsor shares?",
+     "top_doc": "sbp_prudential_regs_ipf",
+     "top_score": 0.64,
+     "answer": "Sponsor Shares mean 5% or more paid-up shares of a bank, acquired by a person(s) individually or in concert with his fam"
+    }
+   ]
+  },
+  "unanswerable_answered (should refuse, answered)": {
+   "count": 3,
+   "examples": [
+    {
+     "id": "u003",
+     "category": "unanswerable",
+     "question": "How many days of sabbatical leave are available?",
+     "top_doc": "hr_leave_policy",
+     "top_score": 0.61,
+     "answer": "Permanent employees are entitled to 8 days of paid casual leave. [1] Permanent employees are entitled to 21 days of paid"
+    },
+    {
+     "id": "u020",
+     "category": "unanswerable",
+     "question": "How long is the notice period for senior management?",
+     "top_doc": "sbp_pr_microfinance",
+     "top_score": 0.61,
+     "answer": "time monitor the lending and collateral management activities including verification process, loan process, safekeeping,"
+    },
+    {
+     "id": "u021",
+     "category": "unanswerable",
+     "question": "What is the minimum balance for a savings account?",
+     "top_doc": "sbp_pr_microfinance",
+     "top_score": 0.61,
+     "answer": "Service Charges, Minimum Balance Requirements and Remuneration For all types of profit and loss deposit accounts (except"
+    }
+   ]
+  },
+  "wrong_sentence (gold in context, extractive pick wrong)": {
+   "count": 1,
+   "examples": [
+    {
+     "id": "p008",
+     "category": "public",
+     "question": "Up to what percentage of CET1 capital is Tier 2 capital eligible for inclusion in the capital base of a microfinance bank?",
+     "top_doc": "sbp_pr_microfinance",
+     "top_score": 0.8,
+     "answer": "Table-A NAME OF MICROFINANCE BANK CAPITAL ADEQUACY RATIO AS OF XX.XX.XXXX Common Equity 1.1 Tier-1 (CET1) Fully Paid-up "
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "date": "2026-11-21",
+ "commit": "4fb69a5",
+ "mode": "offline_extractive",
+ "n": 206,
+ "filter_stage_retrieval": {
+  "none": {
+   "restricted_questions": 46,
+   "questions_with_leaked_chunk": 46,
+   "employee_recall5": 95.2
+  },
+  "post": {
+   "restricted_questions": 46,
+   "questions_with_leaked_chunk": 0,
+   "employee_recall5": 95.2
+  },
+  "pre": {
+   "restricted_questions": 46,
+   "questions_with_leaked_chunk": 0,
+   "employee_recall5": 95.2
+  }
+ },
+ "role_matrix": {
+  "queries": 824,
+  "leaks": 0
+ },
+ "cache_cross_talk": {
+  "restricted_questions": 46,
+  "leaks_with_isolated_cache": 0,
+  "leaks_with_buggy_question_only_cache": 45
+ },
+ "answer_citation_leaks": {
+  "restricted_questions": 46,
+  "leaks": 0
+ },
+ "prompt_injection_in_document": {
+  "poisoned_chunk_retrieved": true,
+  "restricted_value_in_answer": false,
+  "refused": false,
+  "llm_followed_instruction": "not run (no LLM key)"
+ },
+ "not_run": [
+  "LLM answer leakage with a real model"
+ ]
+}
