@@ -62,7 +62,7 @@
   "gold_answer": "7",
   "evidence": "Permanent employees are entitled to 7 days of paid paternity leave.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a005",
@@ -88,7 +88,7 @@
   "gold_answer": "30",
   "evidence": "Permanent employees are entitled to 30 days of paid Hajj leave.",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a007",
@@ -114,7 +114,7 @@
   "gold_answer": "12",
   "evidence": "Permanent employees are entitled to 12 days of paid study leave.",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a009",
@@ -179,7 +179,7 @@
   "gold_answer": "7",
   "evidence": "Any breach of this code must be reported within 7 days of becoming aware of it.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a014",
@@ -244,7 +244,7 @@
   "gold_answer": "Chief Compliance Officer",
   "evidence": "Insider trading concerns should be escalated to the Chief Compliance Officer.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a019",
@@ -348,7 +348,7 @@
   "gold_answer": "USB mass storage",
   "evidence": "USB mass storage is disabled on all corporate laptops.",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a027",
@@ -504,7 +504,7 @@
   "gold_answer": "37,000",
   "evidence": "Grade: Grade 6; Hotel cap per night (PKR): 37,000",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a039",
@@ -652,7 +652,7 @@
   "gold_answer": "18",
   "evidence": "Grade: Grade 3; Annual bonus target (%): 18",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a045",
@@ -706,7 +706,7 @@
   "gold_answer": "1,067,000",
   "evidence": "Grade: Grade 5; Maximum salary (PKR): 1,067,000",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a047",
@@ -760,7 +760,7 @@
   "gold_answer": "2,093,000",
   "evidence": "Grade: Grade 6; Maximum salary (PKR): 2,093,000",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a049",
@@ -868,7 +868,7 @@
   "gold_answer": "24",
   "evidence": "Promotion requires a minimum tenure of 24 months in the current grade.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a053",
@@ -908,7 +908,7 @@
   "gold_answer": "25",
   "evidence": "Retention bonuses are capped at 25 percent of annual base salary.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "r054",
@@ -922,7 +922,7 @@
   "gold_answer": "25",
   "evidence": "Retention bonuses are capped at 25 percent of annual base salary.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a055",
@@ -949,7 +949,7 @@
   "gold_answer": "500,000",
   "evidence": "Role: Branch Manager; Single transaction limit (PKR): 500,000",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a056",
@@ -976,7 +976,7 @@
   "gold_answer": "2,500,000",
   "evidence": "Role: Regional Head; Single transaction limit (PKR): 2,500,000",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a057",
@@ -1003,7 +1003,7 @@
   "gold_answer": "20,000,000",
   "evidence": "Role: Regional Head; Monthly limit (PKR): 20,000,000",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a058",
@@ -1030,7 +1030,7 @@
   "gold_answer": "10,000,000",
   "evidence": "Role: Director Finance; Single transaction limit (PKR): 10,000,000",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a059",
@@ -1070,7 +1070,7 @@
   "gold_answer": "300,000,000",
   "evidence": "Role: CFO; Monthly limit (PKR): 300,000,000",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "r060",
@@ -1138,7 +1138,7 @@
   "gold_answer": "900,000,000",
   "evidence": "Role: CEO; Monthly limit (PKR): 900,000,000",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a063",
@@ -1192,7 +1192,7 @@
   "gold_answer": "2.5",
   "evidence": "The net open foreign exchange position limit is USD 2.5 million.",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a065",
@@ -1273,7 +1273,7 @@
   "gold_answer": "12",
   "evidence": "The liquidity buffer must stay above 12 percent of deposits.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a068",
@@ -1300,7 +1300,7 @@
   "gold_answer": "1",
   "evidence": "Limit breaches are reported to the Risk Committee within 1 business day.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a069",
@@ -1482,7 +1482,7 @@
   "gold_answer": "5",
   "evidence": "شکایت موصول ہونے کے 5 کام کے دنوں میں اس کی تصدیق کی جاتی ہے۔",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a083",
@@ -1521,7 +1521,7 @@
   "gold_answer": "14",
   "evidence": "انتقامی کارروائی کی شکایت 14 دن کے اندر کمیٹی کو دی جا سکتی ہے۔",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a086",
@@ -1625,7 +1625,7 @@
   "gold_answer": "3",
   "evidence": "Manager approval for remote work is given within 3 working days.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a094",
@@ -1638,7 +1638,7 @@
   "gold_answer": "216",
   "evidence": "Department: Engineering; Budget 2026 (PKR million): 216",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "r094",
@@ -1692,7 +1692,7 @@
   "gold_answer": "509",
   "evidence": "Department: Operations; Budget 2026 (PKR million): 509",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "r096",
@@ -1746,7 +1746,7 @@
   "gold_answer": "664",
   "evidence": "Department: Finance; Budget 2026 (PKR million): 664",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "r098",
@@ -1800,7 +1800,7 @@
   "gold_answer": "265",
   "evidence": "Department: Legal; Budget 2026 (PKR million): 265",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "r100",
@@ -1814,7 +1814,7 @@
   "gold_answer": "265",
   "evidence": "Department: Legal; Budget 2026 (PKR million): 265",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a101",
@@ -1895,7 +1895,7 @@
   "gold_answer": "312",
   "evidence": "Department: Risk; Headcount: 312",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a104",
@@ -1922,7 +1922,7 @@
   "gold_answer": "734",
   "evidence": "Department: Compliance; Budget 2026 (PKR million): 734",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a105",
@@ -1962,7 +1962,7 @@
   "gold_answer": "12",
   "evidence": "A written warning remains valid for 12 months.",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "r106",
@@ -1989,7 +1989,7 @@
   "gold_answer": "30",
   "evidence": "Suspension with pay may not exceed 30 days.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "r107",
@@ -2003,7 +2003,7 @@
   "gold_answer": "30",
   "evidence": "Suspension with pay may not exceed 30 days.",
   "label_source": "script_from_facts",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "a108",
@@ -2016,7 +2016,7 @@
   "gold_answer": "7",
   "evidence": "An appeal must be lodged within 7 days of the decision.",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "r108",
@@ -2057,7 +2057,7 @@
   "gold_answer": "3",
   "evidence": "The employee receives 3 days notice of a disciplinary hearing.",
   "label_source": "script_from_facts",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "a110",
@@ -2093,7 +2093,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "u001",
@@ -2102,7 +2102,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "u002",
@@ -2111,7 +2111,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "u003",
@@ -2120,7 +2120,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "u004",
@@ -2129,7 +2129,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "u005",
@@ -2174,7 +2174,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "u010",
@@ -2192,7 +2192,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "u012",
@@ -2228,7 +2228,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "u016",
@@ -2237,7 +2237,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "u017",
@@ -2246,7 +2246,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "u018",
@@ -2264,7 +2264,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "u020",
@@ -2273,7 +2273,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "val"
+  "split": "test"
  },
  {
   "id": "u021",
@@ -2327,7 +2327,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "u027",
@@ -2336,7 +2336,7 @@
   "role": "employee",
   "answerable": false,
   "label_source": "hand_written",
-  "split": "test"
+  "split": "val"
  },
  {
   "id": "u028",
@@ -2355,5 +2355,271 @@
   "answerable": false,
   "label_source": "hand_written",
   "split": "test"
+ },
+ {
+  "id": "p000",
+  "question": "Within how many days may a complainant appeal to the Syndicate under the HEC anti-plagiarism policy?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "hec_plagiarism_policy",
+  "gold_page": 12,
+  "gold_answer": "30",
+  "evidence": "In case of disagreement, the complainant may file an appeal to the Syndicate within the next 30 days.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p001",
+  "question": "After how many days of a university failing to take up a plagiarism case may HEC forward the complaint to the Chancellor?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "hec_plagiarism_policy",
+  "gold_page": 10,
+  "gold_answer": "90",
+  "evidence": "In case of failure, on the part of the university/DAI, to take up the case as per the procedure, within 90 days, HEC may forward the complaint to the Chancellor of the university/DAI for information.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p002",
+  "question": "What is the minimum worth of tangible assets such as land and buildings a college must have on the ground under the HEC institutional affiliation policy?",
+  "category": "public_scanned",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "hec_institutional_affiliation_policy",
+  "gold_page": 7,
+  "gold_answer": "20",
+  "evidence": "The tangible assets in the form of land,buildings,etc.of the worth of not less than PKR 20.00 million shall be existent on the ground.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p003",
+  "question": "What minimum seating capacity must a college library have as a percentage of the total students for that shift?",
+  "category": "public_scanned",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "hec_institutional_affiliation_policy",
+  "gold_page": 5,
+  "gold_answer": "10",
+  "evidence": "That the library shall have a seating capacity for a minimum of 10% of the total number of students for that shift.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p004",
+  "question": "Above what amount must housing finance property be assessed by a valuator on the PBA approved panel?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_housing_finance",
+  "gold_page": 6,
+  "gold_answer": "10",
+  "evidence": "Housing finance exceeding PKR 10 million shall be subject to assessment of the property by at least one valuator listed on the PBA-approved panel.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p005",
+  "question": "Up to what amount of housing finance may banks extend financing by marking a lien on the property in the land record authority records?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_housing_finance",
+  "gold_page": 6,
+  "gold_answer": "5",
+  "evidence": "For housing finance up to PKR 5 million, banks and DFIs may extend financing by marking a lien on the property in the records of the relevant land-record authority.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p006",
+  "question": "After how many days overdue is housing finance classified as Substandard?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_housing_finance",
+  "gold_page": 7,
+  "gold_answer": "180",
+  "evidence": "Substandard Mark-up/profit or principal overdue by 180 days or more from the due date.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p007",
+  "question": "What is the maximum Loan to Value ratio under the microfinance bank prudential regulations?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_microfinance",
+  "gold_page": 14,
+  "gold_answer": "90",
+  "evidence": "Loan to Value (LTV) Ratio Loan to Value Ratio should not exceed 90%.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p008",
+  "question": "Up to what percentage of CET1 capital is Tier 2 capital eligible for inclusion in the capital base of a microfinance bank?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_microfinance",
+  "gold_page": 31,
+  "gold_answer": "41.67",
+  "evidence": "Tier 2 Capital (T2): The total of Tier-2 capital shall be eligible up to a maximum of 41.67 percent of the CET1 capital (after all deductions mentioned at CET1) for inclusion in the capital base.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p009",
+  "question": "What percentage of paid-up shares of a microfinance bank counts as sponsor shares?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_microfinance",
+  "gold_page": 8,
+  "gold_answer": "5",
+  "evidence": "Sponsor Shares means 5% or more paid-up shares of an MFB, acquired by a person individually or in concert with his/her family members, group companies, subsidiaries, and affiliates/associates.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p010",
+  "question": "At what age may an existing President or CEO of a microfinance bank continue until the end of the current tenure?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_microfinance",
+  "gold_page": 40,
+  "gold_answer": "65",
+  "evidence": "Any existing President/CEO who has already attained the age of 65 years or attaining the age 65 years during his/her current term may continue as President till completion of the current tenure.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p011",
+  "question": "What is the limit on a clean facility to an SME borrower under the SBP SME financing regulations?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_sme_financing",
+  "gold_page": 9,
+  "gold_answer": "10",
+  "evidence": "Regulation SME R-4: Limit on Clean Facility Banks & DFIs can take clean exposure (facilities extended based on cash flows of an SME secured solely against personal guarantees) of up to Rs 10 million on an SME borrower.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p012",
+  "question": "Up to what loan amount may banks use their own evaluating staff to value securities for SME loans?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_pr_sme_financing",
+  "gold_page": 13,
+  "gold_answer": "5",
+  "evidence": "Regulation SE R-5: Collateral Valuation For valuation of securities against loans up to Rs 5 million, banks & DFIs at their own discretion may either use the services of their own evaluating staff or the services of PBA approved",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p013",
+  "question": "What is the aggregate investment limit in units of REIT as a percentage of the equity of a bank?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_prudential_regs_ipf",
+  "gold_page": 13,
+  "gold_answer": "15",
+  "evidence": "Aggregate investment limit in units of REIT shall be 15% of equity of the bank/DFI, exclusive of the above aggregate limits.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p014",
+  "question": "To what extent of their value are revaluation reserves on fixed assets included in reserves for Regulation R-1?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_prudential_regs_ipf",
+  "gold_page": 4,
+  "gold_answer": "50",
+  "evidence": "For the purpose of Regulation R-1, reserve shall also include revaluation reserves on account of fixed assets to the extent of 50% of their value.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p015",
+  "question": "What is the minimum retention period for stocks of a company, counted from the date of the last purchase?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_prudential_regs_ipf",
+  "gold_page": 7,
+  "gold_answer": "5",
+  "evidence": "If there are a series of purchases of stocks of a company, the minimum retention period of 5 years shall be counted from the date of the last purchase.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p016",
+  "question": "What risk weightage applies to exposure to banks rated AAA?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "sbp_prudential_regs_ipf",
+  "gold_page": 22,
+  "gold_answer": "25",
+  "evidence": "i) 25% weightage on exposure to banks/DFIs with AAA rating.",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "test"
+ },
+ {
+  "id": "p017",
+  "question": "In the FBR basic concepts guide, the rule does not apply where expenditure under a single account head does not exceed what amount?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "fbr_basic_concepts_income_tax",
+  "gold_page": 9,
+  "gold_answer": "50,000",
+  "evidence": "However, this does not apply to the following: - Where expenditures under a single account head in aggregate does not exceed Rs.50,000;",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
+ },
+ {
+  "id": "p018",
+  "question": "Below what age is an orphan exempt from filing a return solely for owning immovable property?",
+  "category": "public",
+  "role": "employee",
+  "answerable": true,
+  "gold_doc": "fbr_obligation_to_file",
+  "gold_page": 5,
+  "gold_answer": "25",
+  "evidence": "A widow, an orphan below the age of 25 years or a disabled person solely for the reason of owning immovable property",
+  "label_source": "ai_written_from_text",
+  "reviewed": false,
+  "split": "val"
  }
 ]

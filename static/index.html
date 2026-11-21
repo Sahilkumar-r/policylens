@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PolicyLens</title>
+<style>
+  :root { --bg:#fff; --fg:#111; --muted:#666; --line:#ddd; --accent:#0b57d0; --card:#f6f7f9; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111; --fg:#eee; --muted:#999; --line:#333; --accent:#8ab4f8; --card:#1b1b1b; } }
+  body { margin:0; font:16px/1.5 system-ui, sans-serif; background:var(--bg); color:var(--fg); }
+  main { max-width:760px; margin:0 auto; padding:16px; }
+  h1 { font-size:1.4rem; margin:8px 0; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; align-items:center; }
+  select, input, button { font:inherit; padding:8px 12px; border:1px solid var(--line); border-radius:6px; background:var(--card); color:var(--fg); }
+  input { flex:1; min-width:200px; }
+  button { background:var(--accent); color:#fff; border:0; cursor:pointer; }
+  .msg { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:12px; margin:12px 0; }
+  .refused { border-color:#b3261e; }
+  .cite { font-size:.85rem; color:var(--muted); margin-top:8px; }
+  .muted { color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>PolicyLens</h1>
+  <p class="muted">Ask about the Northwind Bank policy library. What you can see depends on your role.</p>
+  <div class="row">
+    <label for="who" class="muted">Signed in as</label>
+    <select id="who">
+      <option value="demo-employee">Employee</option>
+      <option value="demo-hr">HR officer</option>
+      <option value="demo-finance">Finance officer</option>
+      <option value="demo-admin">Admin</option>
+    </select>
+    <span id="levels" class="muted"></span>
+  </div>
+  <form class="row" id="form">
+    <input id="q" placeholder="e.g. How many days of annual leave do permanent employees get?" required minlength="3">
+    <button>Ask</button>
+  </form>
+  <div id="out"></div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const hdr = () => ({ "Content-Type": "application/json", Authorization: "Bearer " + $("who").value });
+async function refreshLevels() {
+  const r = await fetch("/me", { headers: hdr() });
+  const m = await r.json();
+  $("levels").textContent = "Access: " + m.levels.join(", ");
+}
+$("who").onchange = refreshLevels;
+refreshLevels();
+function esc(s) { const d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+$("form").onsubmit = async (ev) => {
+  ev.preventDefault();
+  const r = await fetch("/ask", { method: "POST", headers: hdr(), body: JSON.stringify({ question: $("q").value }) });
+  const a = await r.json();
+  if (!r.ok) { $("out").innerHTML = `<div class="msg refused">${esc(a.detail || "Error")}</div>`; return; }
+  const cites = a.citations.map(c => `[${c.n}] ${esc(c.doc)}, page ${c.page}${c.section ? ", " + esc(c.section) : ""}`).join("<br>");
+  $("out").innerHTML = `<div class="msg ${a.refused ? "refused" : ""}">${esc(a.answer)}
+    ${cites ? `<div class="cite">${cites}</div>` : ""}
+    <div class="muted">${a.latency_ms} ms${a.cached ? ", from cache" : ""}</div></div>` + $("out").innerHTML;
+};
+</script>
+</body>
+</html>

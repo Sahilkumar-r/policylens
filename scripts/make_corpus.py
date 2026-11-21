@@ -6,9 +6,11 @@ Run:  uv run python scripts/make_corpus.py
 
 import json
 import random
+import sys
 from collections import defaultdict
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 OUT = Path(__file__).resolve().parents[1] / "data"
 CORPUS = OUT / "corpus"
 rng = random.Random(7)
@@ -738,6 +740,7 @@ def main():
             dict(
                 doc_id=d_id,
                 file=path.name,
+                path=f"corpus/{path.name}",
                 title=d["title"],
                 access_level=d["access"],
                 fmt=fmt,
@@ -796,6 +799,39 @@ def main():
                 role="employee",
                 answerable=False,
                 label_source="hand_written",
+            )
+        )
+    import fitz
+    from public_questions import PUBLIC
+
+    for f in sorted((OUT / "public").glob("*.pdf")):
+        scanned = sum(len(p.get_text()) for p in fitz.open(f)) < 100
+        manifest.append(
+            dict(
+                doc_id=f.stem,
+                file=f.name,
+                path=f"public/{f.name}",
+                title=f.stem.replace("_", " "),
+                access_level="public",
+                fmt="pdf",
+                scanned=scanned,
+            )
+        )
+    scanned_docs = {m["doc_id"] for m in manifest if m["scanned"]}
+    for n, (fn, page, q, ans, ev) in enumerate(PUBLIC):
+        questions.append(
+            dict(
+                id=f"p{n:03d}",
+                question=q,
+                category="public_scanned" if fn[:-4] in scanned_docs else "public",
+                role="employee",
+                answerable=True,
+                gold_doc=fn[:-4],
+                gold_page=page,
+                gold_answer=ans,
+                evidence=ev,
+                label_source="ai_written_from_text",
+                reviewed=False,
             )
         )
     order = sorted(q["id"] for q in questions)

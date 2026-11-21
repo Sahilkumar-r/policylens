@@ -2,6 +2,7 @@
  {
   "doc_id": "hr_leave_policy",
   "file": "hr_leave_policy.docx",
+  "path": "corpus/hr_leave_policy.docx",
   "title": "HR Leave Policy",
   "access_level": "internal",
   "fmt": "docx",
@@ -10,6 +11,7 @@
  {
   "doc_id": "code_of_conduct",
   "file": "code_of_conduct.pdf",
+  "path": "corpus/code_of_conduct.pdf",
   "title": "Code of Conduct",
   "access_level": "public",
   "fmt": "pdf",
@@ -18,6 +20,7 @@
  {
   "doc_id": "it_security_policy",
   "file": "it_security_policy.pdf",
+  "path": "corpus/it_security_policy.pdf",
   "title": "IT Security Policy",
   "access_level": "internal",
   "fmt": "pdf",
@@ -26,6 +29,7 @@
  {
   "doc_id": "travel_expense_policy",
   "file": "travel_expense_policy.pdf",
+  "path": "corpus/travel_expense_policy.pdf",
   "title": "Travel and Expense Policy",
   "access_level": "internal",
   "fmt": "pdf",
@@ -34,6 +38,7 @@
  {
   "doc_id": "salary_bands",
   "file": "salary_bands.xlsx",
+  "path": "corpus/salary_bands.xlsx",
   "title": "Salary Bands 2026",
   "access_level": "hr_only",
   "fmt": "xlsx",
@@ -42,6 +47,7 @@
  {
   "doc_id": "compensation_review_policy",
   "file": "compensation_review_policy.docx",
+  "path": "corpus/compensation_review_policy.docx",
   "title": "Compensation Review Policy",
   "access_level": "hr_only",
   "fmt": "docx",
@@ -50,6 +56,7 @@
  {
   "doc_id": "finance_approval_matrix",
   "file": "finance_approval_matrix.pdf",
+  "path": "corpus/finance_approval_matrix.pdf",
   "title": "Finance Approval Matrix",
   "access_level": "finance_only",
   "fmt": "pdf",
@@ -58,6 +65,7 @@
  {
   "doc_id": "treasury_limits",
   "file": "treasury_limits.pdf",
+  "path": "corpus/treasury_limits.pdf",
   "title": "Treasury Risk Limits",
   "access_level": "finance_only",
   "fmt": "pdf",
@@ -66,6 +74,7 @@
  {
   "doc_id": "branch_operations_manual",
   "file": "branch_operations_manual.pdf",
+  "path": "corpus/branch_operations_manual.pdf",
   "title": "Branch Operations Manual",
   "access_level": "internal",
   "fmt": "pdf",
@@ -74,6 +83,7 @@
  {
   "doc_id": "procurement_policy",
   "file": "procurement_policy.html",
+  "path": "corpus/procurement_policy.html",
   "title": "Procurement Policy",
   "access_level": "internal",
   "fmt": "html",
@@ -82,6 +92,7 @@
  {
   "doc_id": "whistleblower_policy_ur",
   "file": "whistleblower_policy_ur.txt",
+  "path": "corpus/whistleblower_policy_ur.txt",
   "title": "\u0648\u0633\u0644 \u0628\u0644\u0648\u0648\u0631 \u067e\u0627\u0644\u06cc\u0633\u06cc",
   "access_level": "public",
   "fmt": "txt",
@@ -90,6 +101,7 @@
  {
   "doc_id": "remote_work_policy",
   "file": "remote_work_policy.html",
+  "path": "corpus/remote_work_policy.html",
   "title": "Remote Work Policy / \u0631\u06cc\u0645\u0648\u0679 \u0648\u0631\u06a9 \u067e\u0627\u0644\u06cc\u0633\u06cc",
   "access_level": "internal",
   "fmt": "html",
@@ -98,6 +110,7 @@
  {
   "doc_id": "board_budget_2026",
   "file": "board_budget_2026.xlsx",
+  "path": "corpus/board_budget_2026.xlsx",
   "title": "Board Budget 2026",
   "access_level": "finance_only",
   "fmt": "xlsx",
@@ -106,9 +119,82 @@
  {
   "doc_id": "disciplinary_procedure",
   "file": "disciplinary_procedure.docx",
+  "path": "corpus/disciplinary_procedure.docx",
   "title": "Disciplinary Procedure",
   "access_level": "hr_only",
   "fmt": "docx",
+  "scanned": false
+ },
+ {
+  "doc_id": "fbr_basic_concepts_income_tax",
+  "file": "fbr_basic_concepts_income_tax.pdf",
+  "path": "public/fbr_basic_concepts_income_tax.pdf",
+  "title": "fbr basic concepts income tax",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "fbr_obligation_to_file",
+  "file": "fbr_obligation_to_file.pdf",
+  "path": "public/fbr_obligation_to_file.pdf",
+  "title": "fbr obligation to file",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "hec_institutional_affiliation_policy",
+  "file": "hec_institutional_affiliation_policy.pdf",
+  "path": "public/hec_institutional_affiliation_policy.pdf",
+  "title": "hec institutional affiliation policy",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": true
+ },
+ {
+  "doc_id": "hec_plagiarism_policy",
+  "file": "hec_plagiarism_policy.pdf",
+  "path": "public/hec_plagiarism_policy.pdf",
+  "title": "hec plagiarism policy",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "sbp_pr_housing_finance",
+  "file": "sbp_pr_housing_finance.pdf",
+  "path": "public/sbp_pr_housing_finance.pdf",
+  "title": "sbp pr housing finance",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "sbp_pr_microfinance",
+  "file": "sbp_pr_microfinance.pdf",
+  "path": "public/sbp_pr_microfinance.pdf",
+  "title": "sbp pr microfinance",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "sbp_pr_sme_financing",
+  "file": "sbp_pr_sme_financing.pdf",
+  "path": "public/sbp_pr_sme_financing.pdf",
+  "title": "sbp pr sme financing",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "sbp_prudential_regs_ipf",
+  "file": "sbp_prudential_regs_ipf.pdf",
+  "path": "public/sbp_prudential_regs_ipf.pdf",
+  "title": "sbp prudential regs ipf",
+  "access_level": "public",
+  "fmt": "pdf",
   "scanned": false
  }
 ]

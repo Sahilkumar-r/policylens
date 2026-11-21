@@ -10,6 +10,16 @@ OCR_MIN_CHARS = 30
 _ocr = None
 
 
+def repair_ocr_spacing(text: str) -> str:
+    """RapidOCR often drops spaces ('Thebranchvaultcashlimit isPKR25million'); this breaks BM25, embeddings
+    and heading detection. Split long letter runs with a word frequency model; separate letters and digits."""
+    import wordninja
+
+    text = re.sub(r"[A-Za-z]{9,}", lambda m: " ".join(wordninja.split(m.group())), text)
+    text = re.sub(r"(?<=[A-Za-z])(?=\d)|(?<=\d)(?=[A-Za-z])", " ", text)
+    return re.sub(r"(?<=\d)\.(?=[A-Za-z])", ". ", text)
+
+
 def ocr_image(png: bytes) -> str:
     """OCR one page image with RapidOCR (ONNX, CPU). Lines are ordered top to bottom."""
     global _ocr
@@ -21,7 +31,7 @@ def ocr_image(png: bytes) -> str:
     path, key = config.CACHE_DIR / "ocr.pkl", hashlib.sha1(png).hexdigest()
     cache = pickle.loads(path.read_bytes()) if path.exists() else {}
     if key in cache:
-        return cache[key]
+        return repair_ocr_spacing(cache[key])
     if _ocr is None:
         from rapidocr_onnxruntime import RapidOCR
 
@@ -32,7 +42,7 @@ def ocr_image(png: bytes) -> str:
     config.CACHE_DIR.mkdir(exist_ok=True)
     cache[key] = text
     path.write_bytes(pickle.dumps(cache))
-    return text
+    return repair_ocr_spacing(text)
 
 
 def table_to_text(rows: list[list]) -> str:

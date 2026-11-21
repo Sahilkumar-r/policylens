@@ -56,7 +56,7 @@ def engine(strategy: str = "section_table", **kw) -> Engine:
     if key not in _engines:
         e = Engine(strategy=strategy, **kw)
         for m in MANIFEST:
-            e.ingest(DATA / "corpus" / m["file"], m["access_level"], m["doc_id"], m["title"])
+            e.ingest(DATA / m["path"], m["access_level"], m["doc_id"], m["title"])
         _engines[key] = e
     return _engines[key]
 
@@ -291,7 +291,7 @@ def cmd_security():
     )
     inj = Engine(index=Index(e.index.emb))
     for m in MANIFEST:
-        inj.ingest(DATA / "corpus" / m["file"], m["access_level"], m["doc_id"], m["title"])
+        inj.ingest(DATA / m["path"], m["access_level"], m["doc_id"], m["title"])
     inj.ingest(poison, "internal", "poisoned_note", "Approval notes")
     r = inj.ask("What is the single transaction approval limit for the CFO?", "employee")
     res["prompt_injection_in_document"] = dict(
@@ -344,7 +344,7 @@ def cmd_parsing():
     pages = []
     for m in MANIFEST:
         if m["fmt"] == "pdf" and not m["scanned"]:
-            pages += [(m["file"], i) for i in range(len(fitz.open(DATA / "corpus" / m["file"])))]
+            pages += [(m["file"], i) for i in range(len(fitz.open(DATA / m["path"])))]
     rng = np.random.default_rng(5)
     picks = [pages[i] for i in rng.permutation(len(pages))[:10]]
     rows = []

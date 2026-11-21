@@ -58,7 +58,9 @@ class Index:
         self._bm25: dict[frozenset, tuple] = {}
         self._next = 0
         dim = self.emb.embed(["dim probe"]).shape[1]
-        self.client.recreate_collection(
+        if self.client.collection_exists(self.COLLECTION):
+            self.client.delete_collection(self.COLLECTION)
+        self.client.create_collection(
             self.COLLECTION, vectors_config=qm.VectorParams(size=dim, distance=qm.Distance.COSINE)
         )
 
