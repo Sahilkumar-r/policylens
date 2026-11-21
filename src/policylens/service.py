@@ -88,6 +88,7 @@ class Engine:
             "refused": ans.refused,
             "citations": ans.citations,
             "mode": ans.mode,
+            "usage": ans.usage,
             "cached": bool(cached),
             "latency_ms": ms,
             "trace": trace,

@@ -37,3 +37,4 @@ class Answer:
     refused: bool
     citations: list[dict] = field(default_factory=list)
     mode: str = "extractive"
+    usage: dict = field(default_factory=dict)  # token counts reported by the provider, LLM mode only
