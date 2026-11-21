@@ -17,8 +17,8 @@ ROLE_LEVELS = {
     "admin": frozenset(LEVELS),
 }
 
-# Refusal threshold on the top dense cosine; tuned on the validation split (eval/tune_refusal.py).
-REFUSAL_THRESHOLD = float(os.getenv("REFUSAL_THRESHOLD", "0.35"))
+# Refusal threshold on the top dense cosine; tuned on the validation split by `eval/run_evals.py refusal`.
+REFUSAL_THRESHOLD = float(os.getenv("REFUSAL_THRESHOLD", "0.59"))
 CACHE_SIMILARITY = 0.95
 
 LLM_API_KEY = os.getenv("LLM_API_KEY", "")
