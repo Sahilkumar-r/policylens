@@ -1,0 +1,114 @@
+[
+ {
+  "doc_id": "hr_leave_policy",
+  "file": "hr_leave_policy.docx",
+  "title": "HR Leave Policy",
+  "access_level": "internal",
+  "fmt": "docx",
+  "scanned": false
+ },
+ {
+  "doc_id": "code_of_conduct",
+  "file": "code_of_conduct.pdf",
+  "title": "Code of Conduct",
+  "access_level": "public",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "it_security_policy",
+  "file": "it_security_policy.pdf",
+  "title": "IT Security Policy",
+  "access_level": "internal",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "travel_expense_policy",
+  "file": "travel_expense_policy.pdf",
+  "title": "Travel and Expense Policy",
+  "access_level": "internal",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "salary_bands",
+  "file": "salary_bands.xlsx",
+  "title": "Salary Bands 2026",
+  "access_level": "hr_only",
+  "fmt": "xlsx",
+  "scanned": false
+ },
+ {
+  "doc_id": "compensation_review_policy",
+  "file": "compensation_review_policy.docx",
+  "title": "Compensation Review Policy",
+  "access_level": "hr_only",
+  "fmt": "docx",
+  "scanned": false
+ },
+ {
+  "doc_id": "finance_approval_matrix",
+  "file": "finance_approval_matrix.pdf",
+  "title": "Finance Approval Matrix",
+  "access_level": "finance_only",
+  "fmt": "pdf",
+  "scanned": false
+ },
+ {
+  "doc_id": "treasury_limits",
+  "file": "treasury_limits.pdf",
+  "title": "Treasury Risk Limits",
+  "access_level": "finance_only",
+  "fmt": "pdf",
+  "scanned": true
+ },
+ {
+  "doc_id": "branch_operations_manual",
+  "file": "branch_operations_manual.pdf",
+  "title": "Branch Operations Manual",
+  "access_level": "internal",
+  "fmt": "pdf",
+  "scanned": true
+ },
+ {
+  "doc_id": "procurement_policy",
+  "file": "procurement_policy.html",
+  "title": "Procurement Policy",
+  "access_level": "internal",
+  "fmt": "html",
+  "scanned": false
+ },
+ {
+  "doc_id": "whistleblower_policy_ur",
+  "file": "whistleblower_policy_ur.txt",
+  "title": "\u0648\u0633\u0644 \u0628\u0644\u0648\u0648\u0631 \u067e\u0627\u0644\u06cc\u0633\u06cc",
+  "access_level": "public",
+  "fmt": "txt",
+  "scanned": false
+ },
+ {
+  "doc_id": "remote_work_policy",
+  "file": "remote_work_policy.html",
+  "title": "Remote Work Policy / \u0631\u06cc\u0645\u0648\u0679 \u0648\u0631\u06a9 \u067e\u0627\u0644\u06cc\u0633\u06cc",
+  "access_level": "internal",
+  "fmt": "html",
+  "scanned": false
+ },
+ {
+  "doc_id": "board_budget_2026",
+  "file": "board_budget_2026.xlsx",
+  "title": "Board Budget 2026",
+  "access_level": "finance_only",
+  "fmt": "xlsx",
+  "scanned": false
+ },
+ {
+  "doc_id": "disciplinary_procedure",
+  "file": "disciplinary_procedure.docx",
+  "title": "Disciplinary Procedure",
+  "access_level": "hr_only",
+  "fmt": "docx",
+  "scanned": false
+ }
+]
